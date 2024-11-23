@@ -17,6 +17,7 @@ if( BookmarkLinkRegex.test(webSideLink.value) && BookmarkNameRegex.test(webSideN
     BookmarksArray.push(Bookmark)
     localStorage.setItem( "Bookmark",JSON.stringify(BookmarksArray))
     displayBookmark()
+    clearInput()
 }else{
     alert("Enter Valid URL & Side name ")
 }
@@ -24,7 +25,7 @@ if( BookmarkLinkRegex.test(webSideLink.value) && BookmarkNameRegex.test(webSideN
 
 function displayBookmark(){
     var collection =""
-    for (var i = 0; i < BookmarksArray.length; i++) {
+    for (var i = 0 ; i < BookmarksArray.length; i++) {
         collection +=`
         <tr>
                                 <td>${i}</td>
@@ -33,11 +34,19 @@ function displayBookmark(){
                                 <td><button href="#" onclick="deleteBookmark(${i})" class="btn btn-danger"><i class="fas fa-trash-can me-2"></i>Delete</button></td>
                             </tr>
         `
-tBody.innerHTML = collection
+
      }
+     tBody.innerHTML = collection
+}
+function clearInput(){
+Bookmark = {
+        name: webSideName.value = "",
+        link: webSideLink.value = "",
+    }
 }
 function deleteBookmark(BookmarkIndex){
 BookmarksArray.splice(BookmarkIndex,1)
+localStorage.setItem( "Bookmark",JSON.stringify(BookmarksArray))
 displayBookmark()
 }
 
