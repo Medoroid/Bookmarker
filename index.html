@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>BooKmarer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <!-- style file-->
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/all.min.css">
+     <link rel="stylesheet" href="css/bootstrap.min.css.map">
+     <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="crud py-5 "  style=" background-color: #F7ECDE;">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 offset-1 mt-1 mb-3">
+                    <h1>Bookmarker</h1>
+                    <div class="form from-control py-3  text-center">
+                        <div class="title mb-4 p-3 py-4 mt-5">
+                            
+                            <h2 class=" d-flex gap-3 align-items-center justify-content-center"><i class="fas fa-bookmark"></i> Bookmark your favorite sites <i class="fas fa-bookmark"></i></h2>
+                            
+                        </div>
+                        <label for="webSideName" class="fw-semibold  w-100 text-start"><i class="fas fa-book-bookmark me-2"></i>Side Name</label>
+                        <input class="form-control mb-4 mt-1 py-2" type="text" id="webSideName" name="Name" placeholder="Bookmark Name">
+                        <label for="webSideName"  class="fw-semibold w-100 text-start"><i class="fas fa-link me-2"></i>Side URL</label>
+                        <input class="form-control mb-4 mt-1 py-2" type="text" id="webSideLink" name="price" placeholder="webSide URL">
+                <button type="button" id="addBookmarkBtn" class=" btn mb-4 mt-2 text-white btn btn-submit px-5" style="background-color: #BB4120;" onclick="addBookmark()">submit</button>
+            </div>
+                </div>
+                <div class="col-10 offset-1 my-1">
+                    <div class="weper">
+                    <table class=" table table-striped">
+                        <thead>
+                            <tr>
+                            <th>Index</th>
+                            <th>webSide Name</th>
+                            <th>Visit</th>
+                            <th>deleta</th>
+                            <!-- <th><button class="btn-outline-warning btn" id="updateProduct">update</button></th>
+                            <th><button class="btn-outline-danger btn" id="deletaProduct">deleta</button></th> -->
+                        </tr>
+                        </thead>
+                        <tbody id="tBody">
+                                <tr>
+                                <td>1</td>
+                                <td>Name</td>
+                                <td><a href="#" target="_blank" class="btn btn-success"><i class="fas fa-eye me-2"></i>Visit</a></td>
+                                <td><button class="btn btn-danger"><i class="fas fa-trash-can me-2"></i>Delete</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
